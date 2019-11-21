@@ -1,12 +1,14 @@
-import LRU, FIFO, LFU, Random
+import LRU, FIFO, LFU, RND 
 
 def main():
     while(True):
-        data = input("입력할 데이터 : ")
-        data=data.split(" ")
-        slotcount=input("slotcount : ")
+        input_data = list(map(int, input("값 입력 : ").split()))
+        slotcount = int(input("slotcount : "))
 
-        LRU.LRU_implement(data,slotcount)
-        FIFO.FIFO_implement(data,slotcount)
-        LFU.LFU_implement(data,slotcount)
-        Random.Random_implement(data,slotcount)
+        LRU.LRU_implement(input_data,slotcount)
+        FIFO.FIFO_implement(input_data,slotcount)
+        LFU.LFU_implement(input_data,slotcount)
+        RND.Random_implement(input_data,slotcount)
+
+if __name__ == "__main__":
+	main()        
