@@ -9,10 +9,10 @@ def LRU_implement(inputdata,slotcount):
 
         if next_data in datas:
             hit += 1
-            print("Round#{0} -> 현재 캐쉬 상태 : {1}, HIT!!".format(i + 1, list(zip(datas,counts))))
             counts[datas.index(next_data)] = -1
             for index in range(len(counts)):
                 counts[index] += 1
+            print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}, HIT!!".format(i + 1, next_data, list(zip(datas, counts))))
             continue
 
         if len(datas) < slotcount:
@@ -33,6 +33,6 @@ def LRU_implement(inputdata,slotcount):
             for index in range(len(counts)):
                 counts[index] += 1
 
-        print("Round#{0} -> 현재 캐쉬 상태 : {1}".format(i + 1, list(zip(datas,counts))))
+        print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}".format(i + 1, next_data, list(zip(datas,counts))))
 
-    print(hit, hit / n)
+    print("H = {} / {} = {}".format(hit, n, hit/n))

@@ -11,7 +11,7 @@ def Random_implement(inputdata,slotcount):
 
         if next_data in a:
             hit += 1
-            print("Round#{0} -> 현재 캐쉬 상태 : {1}, HIT!!".format(i+1, a))
+            print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}, HIT!!".format(i+1, next_data, a))
             continue
 
         if len(a) < slotcount:
@@ -21,6 +21,6 @@ def Random_implement(inputdata,slotcount):
             random_number = randint(0, slotcount-1)
             a[random_number] = next_data
 
-        print("Round#{0} -> 현재 캐쉬 상태 : {1}".format(i+1, a))
+        print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}".format(i+1, next_data, a))
 
-    print(hit, hit/n)
+    print("H = {} / {} = {}".format(hit, n, hit/n))
