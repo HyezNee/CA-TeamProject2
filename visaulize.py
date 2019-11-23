@@ -22,7 +22,6 @@ for n in range(3, 11):
         for j in range(input_size):
             input_list.append(randint(0, 11))
 
-        print("input : ", input_list, n)
         tmp_LRU += LRU.LRU_implement(input_list, n)
         tmp_LFU += LFU.LFU_implement(input_list, n)
         tmp_RND += RND.Random_implement(input_list, n)
