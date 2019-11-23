@@ -1,11 +1,14 @@
 import heapq
 
 def LFU_implement(inputdata,slotcount):
+    print("\nLFU : ")
+
     n = len(inputdata)
     hit = 0
     datas = []  # 슬롯 역할을 할 힙
 
     for i in range(n):
+
         next_data = inputdata[i]
         uniqueNum = i   # uniqueNum : heapq 모듈이 두번 이상의 value도 같이 정렬시켜버리므로 그것을 방지하기 위해.
         if next_data in [item[2] for item in datas]:  # 캐시 적중
@@ -24,3 +27,4 @@ def LFU_implement(inputdata,slotcount):
             print("Round#{} -> [{}] 현재 캐쉬 상태 : {}".format(i + 1, next_data, [(item[2], item[0]) for item in datas]))
 
     print("H = {} / {} = {}".format(hit, n, hit/n))
+    return hit / n  

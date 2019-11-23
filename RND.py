@@ -1,7 +1,8 @@
 from random import *
 
 def Random_implement(inputdata,slotcount):
-    
+    print("\nRandom : ")
+
     n = len(inputdata)
     hit = 0
     a = []
@@ -24,3 +25,4 @@ def Random_implement(inputdata,slotcount):
         print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}".format(i+1, next_data, a))
 
     print("H = {} / {} = {}".format(hit, n, hit/n))
+    return hit / n

@@ -1,4 +1,7 @@
 def LRU_implement(inputdata,slotcount):
+
+    print("\nLRU : ")
+
     n = len(inputdata)
     hit = 0
     datas = []
@@ -36,3 +39,4 @@ def LRU_implement(inputdata,slotcount):
         print("Round #{0} -> [{1}] 현재 캐쉬 상태 : {2}".format(i + 1, next_data, list(zip(datas,counts))))
 
     print("H = {} / {} = {}".format(hit, n, hit/n))
+    return hit / n
