@@ -31,10 +31,6 @@ for n in range(3, 11):
     LFU_list.append(tmp_LFU / 10)
     RND_list.append(tmp_RND / 10)
 
-print(LRU_list)
-print(LFU_list)
-print(RND_list)
-
 index = [i for i in range(3,11)]
 index = np.array(index)
 width = 0.25
