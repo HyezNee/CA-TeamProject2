@@ -8,7 +8,7 @@ LFU_list = []
 RND_list = []
 FIFO_list = []
 
-input_size = 100
+input_size = 30
 
 for n in range(3, 11):
 
