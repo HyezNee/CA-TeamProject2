@@ -1,4 +1,4 @@
-import LRU, FIFO, LFU, RND 
+import LRU, FIFO, LFU, RND, NEW
 from datetime import datetime
 
 def main():
@@ -21,6 +21,10 @@ def main():
         starttime = datetime.now()
         RND.Random_implement(input_data,slotcount)
         print("RND 수행 시간 : ", (datetime.now()-starttime).microseconds)
+
+        starttime = datetime.now()
+        NEW.NEW_implement(input_data, slotcount)
+        print("NEW 수행 시간 : ", (datetime.now() - starttime).microseconds)
 
 
 if __name__ == "__main__":
